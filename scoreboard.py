@@ -11,10 +11,10 @@ class Scoreboard(Turtle):
         self.reset()
         self.color("white")
         self.penup()
-        self.ht
+        self.hideturtle()
         self.goto(position)
-        self.write(f"{self.score}", True, "center", ("courier", 20, "normal"))
+        self.write(f"{self.score}", True, "center", ("courier", 40, "normal"))
 
     def add_score(self):
-        self.score +=1
+        self.score += 1
         self.refresh(self.position)

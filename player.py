@@ -4,6 +4,7 @@ from turtle import Turtle
 class Player(Turtle):
     def __init__(self, coor):
         super().__init__()
+        self.start_position = coor
         self.shape("square")
         self.color("white")
         self.penup()
@@ -18,3 +19,6 @@ class Player(Turtle):
     def move_down(self):
         if self.ycor() > -240:
             self.sety(self.ycor() - MOVE_STEP)
+
+    def reset_position(self):
+        self.goto(self.start_position)
